@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HORIZONTAL -->
+    <nav>
+        <div class="horizontal">
+            <ul class="links">
+                <li><a class="active-page" href="#" title="You are currently here">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" title="Click me!">Click me</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+
+    <!-- VERTICAL/HAMBURGER -->
+    <input type="checkbox" id="down">
+    <label for="down" class="hamburger">
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </label>
+
+    <div class="vertical">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+        <a href="extra.html">extra.html</a>
+        <a class="donotclickme" href="https://www.yout-ube.com/watch?v=dQw4w9WgXcQ&t=1s">Click Me</a>
+
+    </div>
+
+
+
+    <section id="home">
+        <h1>This is the HOME section</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequuntur dolores repellendus harum blanditiis. Maiores commodi excepturi eveniet accusantium quia omnis, magnam quibusdam impedit cumque error voluptatum cum provident nam.</p>
+    </section>
+
+    <section id="about" class="sample">
+        <h1>This is the ABOUT section</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ratione corporis, ad quidem officiis rerum delectus deserunt itaque laborum nobis? Sapiente, voluptatibus voluptate magni sequi unde doloribus aliquam magnam voluptatum.</p>
+    </section>
+
+    <section id="portfolio">
+        <h1>This is the PORTFOLIO section</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam, accusamus tempora consequatur autem tenetur, labore inventore corporis magni, in temporibus atque itaque dignissimos harum minus aliquid assumenda rerum minima.</p>
+    </section>
+
+    <section id="contact">
+        <h1>This is the CONTACT section</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam, accusamus tempora consequatur autem tenetur, labore inventore corporis magni, in temporibus atque itaque dignissimos harum minus aliquid assumenda rerum minima.</p>
+    </section>
+
+
+    <!-- JS -->
+    <script>
+    document.querySelectorAll('.vertical a').forEach(link => {
+        link.addEventListener('click', () => {
+        document.getElementById('down').checked = false;
+        });
+    });
+    </script>
+
+
+</body>
+</html>
